@@ -7,6 +7,8 @@
 6. Mount namespace
 7. veth pair
 
+![ns隔离](nsIsolation.png)
+
 ```
 # ls /var/run/netns
 
@@ -102,3 +104,98 @@ target     prot opt source               destination
 就带来了潜在的安全风险。如果用户希望屏蔽这一行为，则需要结合PID
 namespace和Mount namespace的隔离特性做到network namespace之间的完全
 不可达，感兴趣的读者可以自行查阅相关资料。
+
+namespace存在于 /proc/PID/ns目录下面
+
+看两个进程是否属于同一个namespace就要看中括号里面的数字是否一样。
+![proc PID ns 目录](procPIDns.png)
+
+## 往ns中放进程
+![进程ID](procPID.png)
+
+```
+# touch /home/conglj/network/net
+# mount --bind /proc/$$/ns/net /home/conglj/network/net
+```
+
+![挂载 ns存在](mountNet.png)
+
+执行setns例子
+
+```
+# vim proc_pid_setns.c
+```
+
+``` c
+#include <stdio.h>
+#include <fcntl.h>
+
+int main(int argc, char *argv[])
+{
+    printf("setns...\n");
+    int fd = open(argv[1], O_RDONLY);
+    setns(fd, 0);
+    execvp(argv[2], &argv[2]);
+}
+```
+
+![setns](setns.png)
+
+这种方式类似于docker和k8s。
+> kubernetes网络全网指南 29页
+
+[参考文章](https://www.cnblogs.com/sparkdev/p/9365405.html)
+
+执行这个代码文件
+nsDemoP30.c
+
+```
+# gcc nsDemoP30.c -o ns && ./ns
+-[36212] Hello ?
+- [    1] World !
+[root@In Namespace 1 network]#
+[root@In Namespace 1 network]# ls -l /proc/$$/ns
+total 0
+lrwxrwxrwx 1 root root 0 Jul 26 12:21 ipc -> ipc:[4026535157]
+lrwxrwxrwx 1 root root 0 Jul 26 12:21 mnt -> mnt:[4026535155]
+lrwxrwxrwx 1 root root 0 Jul 26 12:21 net -> net:[4026535160]
+lrwxrwxrwx 1 root root 0 Jul 26 12:21 pid -> pid:[4026535158]
+lrwxrwxrwx 1 root root 0 Jul 26 12:21 user -> user:[4026531837]
+lrwxrwxrwx 1 root root 0 Jul 26 12:21 uts -> uts:[4026535156]
+[root@In Namespace 1 network]# ifconfig
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+veth1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 169.254.1.2  netmask 255.255.255.252  broadcast 0.0.0.0
+        inet6 fe80::64eb:3dff:fe61:ba64  prefixlen 64  scopeid 0x20<link>
+        ether 66:eb:3d:61:ba:64  txqueuelen 1000  (Ethernet)
+        RX packets 19  bytes 3087 (3.0 KiB)
+        RX errors 0  dropped 11  overruns 0  frame 0
+        TX packets 8  bytes 656 (656.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+[root@In Namespace 1 network]# ls -l /proc/1/ns
+total 0
+lrwxrwxrwx 1 root root 0 Jul 26 12:21 ipc -> ipc:[4026535157]
+lrwxrwxrwx 1 root root 0 Jul 26 12:21 mnt -> mnt:[4026535155]
+lrwxrwxrwx 1 root root 0 Jul 26 12:21 net -> net:[4026535160]
+lrwxrwxrwx 1 root root 0 Jul 26 12:21 pid -> pid:[4026535158]
+lrwxrwxrwx 1 root root 0 Jul 26 12:21 user -> user:[4026531837]
+lrwxrwxrwx 1 root root 0 Jul 26 12:21 uts -> uts:[4026535156]
+[root@In Namespace 1 network]# nc -l 1234
+
+# 新开一个terminal new1
+new1# nc 169.254.1.2 1234
+# input haha
+new1# haha
+
+# 原来的terminal 显示haha
+[root@In Namespace 1 network]# nc -l 1234
+haha
+```

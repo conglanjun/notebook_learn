@@ -1,0 +1,482 @@
+2024-07-31T10:41:28.383Z        INFO    webhooks.BareMetalHost  validate create {"namespace": "metal3", "name": "bmh-158"}
+2024-07-31T10:41:28.387Z        INFO    controllers.BareMetalHost       start   {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:28.387Z        INFO    controllers.BMCEventSubscription        start   {"bmceventsubscription": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:28.388Z        INFO    controllers.BareMetalHost       Reconstructing Status from hardwareData and annotation  {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:28.388Z        INFO    controllers.BareMetalHost       No status cache found   {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:28.388Z        INFO    controllers.BMCEventSubscription        done    {"bmceventsubscription": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:28.388Z        INFO    controllers.BareMetalHost       adding finalizer        {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "existingFinalizers": [], "newValue": "baremetalhost.metal3.io"}
+2024-07-31T10:41:28.394Z        INFO    webhooks.BareMetalHost  validate update {"namespace": "metal3", "name": "bmh-158"}
+2024-07-31T10:41:28.397Z        INFO    KubeAPIWarningLogger    metadata.finalizers: "baremetalhost.metal3.io": prefer a domain-qualified finalizer name to avoid accidental conflicts with other finalizer writers
+2024-07-31T10:41:28.397Z        INFO    controllers.BMCEventSubscription        start   {"bmceventsubscription": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:28.397Z        INFO    controllers.BMCEventSubscription        done    {"bmceventsubscription": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:28.397Z        INFO    controllers.BareMetalHost       start   {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:28.397Z        INFO    controllers.BareMetalHost       Reconstructing Status from hardwareData and annotation  {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:28.397Z        INFO    controllers.BareMetalHost       No status cache found   {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:28.397Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:28.408Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:28.444Z        INFO    controllers.BareMetalHost       changing provisioning state     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "", "old": "", "new": "registering"}
+2024-07-31T10:41:28.444Z        INFO    controllers.BareMetalHost       saving boot mode        {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "", "new mode": "legacy"}
+2024-07-31T10:41:28.444Z        INFO    controllers.BareMetalHost       saving host status      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "", "operational status": "", "provisioning state": "registering"}
+2024-07-31T10:41:28.454Z        INFO    controllers.BareMetalHost       done    {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "", "requeue": true, "after": "0s"}
+2024-07-31T10:41:28.454Z        INFO    controllers.BMCEventSubscription        start   {"bmceventsubscription": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:28.454Z        INFO    controllers.BareMetalHost       start   {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:28.454Z        INFO    controllers.BMCEventSubscription        done    {"bmceventsubscription": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:28.457Z        INFO    controllers.BareMetalHost.secret_manager        setting secret environment label        {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "secret": "bmh-158-bmc-secret", "secretNamespace": "metal3"}
+2024-07-31T10:41:28.458Z        INFO    controllers.BareMetalHost.secret_manager        setting secret owner reference  {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "secret": "bmh-158-bmc-secret", "secretNamespace": "metal3", "ownerKind": "BareMetalHost", "owner": "metal3/bmh-158", "ownerUID": "91bbce48-1006-4fe4-82d7-1d0b0a007e15"}
+2024-07-31T10:41:28.458Z        INFO    controllers.BareMetalHost.secret_manager        setting secret finalizer        {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "secret": "bmh-158-bmc-secret", "secretNamespace": "metal3"}
+2024-07-31T10:41:28.462Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:28.467Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:28.496Z        DEBUG   controllers.BareMetalHost       registering and validating access to management controller      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering", "credentials": {}}
+2024-07-31T10:41:28.496Z        INFO    controllers.BareMetalHost       new credentials {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering"}
+2024-07-31T10:41:28.496Z        DEBUG   provisioner.ironic      validating management access    {"host": "metal3~bmh-158"}
+2024-07-31T10:41:28.496Z        DEBUG   provisioner.ironic      looking for existing node by name       {"host": "metal3~bmh-158", "name": "metal3~bmh-158"}
+2024-07-31T10:41:28.506Z        INFO    provisioner.ironic      node with name metal3~bmh-158 doesn't exist     {"host": "metal3~bmh-158"}
+2024-07-31T10:41:28.506Z        DEBUG   provisioner.ironic      looking for existing node by name       {"host": "metal3~bmh-158", "name": "bmh-158"}
+2024-07-31T10:41:28.517Z        INFO    provisioner.ironic      node with name bmh-158 doesn't exist    {"host": "metal3~bmh-158"}
+2024-07-31T10:41:28.517Z        INFO    provisioner.ironic      looking for existing node by MAC        {"host": "metal3~bmh-158", "MAC": "9c:c2:c4:43:88:d9"}
+2024-07-31T10:41:28.526Z        INFO    provisioner.ironic      port with address doesn't exist {"host": "metal3~bmh-158", "MAC": "9c:c2:c4:43:88:d9"}
+2024-07-31T10:41:28.526Z        INFO    provisioner.ironic      registering host in ironic      {"host": "metal3~bmh-158"}
+2024-07-31T10:41:28.587Z        INFO    provisioner.ironic      creating PXE enabled ironic port for node       {"host": "metal3~bmh-158", "NodeUUID": "6948e186-19b4-4f00-baa5-6df7f605a0d7", "MAC": "9c:c2:c4:43:88:d9"}
+2024-07-31T10:41:28.614Z        INFO    provisioner.ironic      current provision state {"host": "metal3~bmh-158", "lastError": "", "current": "enroll", "target": ""}
+2024-07-31T10:41:28.614Z        INFO    provisioner.ironic      changing provisioning state     {"host": "metal3~bmh-158", "current": "enroll", "existing target": "", "new target": "manage"}
+2024-07-31T10:41:28.643Z        INFO    controllers.BareMetalHost       setting provisioning id {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering", "ID": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:41:28.643Z        INFO    controllers.BareMetalHost       host not ready  {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering", "wait": "10s"}
+2024-07-31T10:41:28.643Z        INFO    controllers.BareMetalHost       saving host status      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering", "operational status": "OK", "provisioning state": "registering"}
+2024-07-31T10:41:28.654Z        INFO    controllers.BareMetalHost       publishing event        {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "reason": "Registered", "message": "Registered new host"}
+2024-07-31T10:41:28.654Z        INFO    controllers.BMCEventSubscription        start   {"bmceventsubscription": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:28.654Z        INFO    controllers.BMCEventSubscription        done    {"bmceventsubscription": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:28.658Z        INFO    controllers.BareMetalHost       done    {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering", "requeue": true, "after": "10s"}
+2024-07-31T10:41:28.658Z        INFO    controllers.BareMetalHost       start   {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:28.658Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:28.662Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:28.677Z        DEBUG   controllers.BareMetalHost       registering and validating access to management controller      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering", "credentials": {"credentials":{"name":"bmh-158-bmc-secret","namespace":"metal3"},"credentialsVersion":"8982407"}}
+2024-07-31T10:41:28.677Z        DEBUG   provisioner.ironic      validating management access    {"host": "metal3~bmh-158"}
+2024-07-31T10:41:28.687Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:28.700Z        DEBUG   provisioner.ironic      node has assigned port  {"host": "metal3~bmh-158", "node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:41:28.700Z        INFO    provisioner.ironic      current provision state {"host": "metal3~bmh-158", "lastError": "", "current": "verifying", "target": "manageable"}
+2024-07-31T10:41:28.700Z        INFO    controllers.BareMetalHost       host not ready  {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering", "wait": "10s"}
+2024-07-31T10:41:28.700Z        INFO    controllers.BareMetalHost       done    {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering", "requeue": true, "after": "10s"}
+2024-07-31T10:41:38.659Z        INFO    controllers.BareMetalHost       start   {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:38.659Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:38.670Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:38.692Z        DEBUG   controllers.BareMetalHost       registering and validating access to management controller      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering", "credentials": {"credentials":{"name":"bmh-158-bmc-secret","namespace":"metal3"},"credentialsVersion":"8982407"}}
+2024-07-31T10:41:38.692Z        DEBUG   provisioner.ironic      validating management access    {"host": "metal3~bmh-158"}
+2024-07-31T10:41:38.706Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:38.723Z        DEBUG   provisioner.ironic      node has assigned port  {"host": "metal3~bmh-158", "node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:41:38.723Z        INFO    provisioner.ironic      current provision state {"host": "metal3~bmh-158", "lastError": "", "current": "manageable", "target": ""}
+2024-07-31T10:41:38.723Z        INFO    provisioner.ironic      adding option data      {"host": "metal3~bmh-158", "option": "deploy_kernel", "section": "driver_info", "value": "http://10.8.20.56:6180/images/ironic-python-agent.kernel"}
+2024-07-31T10:41:38.723Z        INFO    provisioner.ironic      adding option data      {"host": "metal3~bmh-158", "option": "deploy_ramdisk", "section": "driver_info", "value": "http://10.8.20.56:6180/images/ironic-python-agent.initramfs"}
+2024-07-31T10:41:38.723Z        INFO    provisioner.ironic      updating option data    {"host": "metal3~bmh-158", "option": "automated_clean", "value": true, "oldValue": null}
+2024-07-31T10:41:38.723Z        INFO    provisioner.ironic      updating node settings in ironic        {"host": "metal3~bmh-158", "updateCount": 3}
+2024-07-31T10:41:38.795Z        DEBUG   controllers.BareMetalHost       using hardware profile  {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering", "profile": "unknown"}
+2024-07-31T10:41:38.795Z        INFO    controllers.BareMetalHost       updating hardware profile       {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering", "profile": "unknown"}
+2024-07-31T10:41:38.795Z        INFO    controllers.BareMetalHost       RootDeviceHints have changed    {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering", "old": null, "new": {"deviceName":"/dev/sda"}}
+2024-07-31T10:41:38.795Z        INFO    controllers.BareMetalHost       saving host status      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering", "operational status": "OK", "provisioning state": "registering"}
+2024-07-31T10:41:38.807Z        INFO    controllers.BareMetalHost       publishing event        {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "reason": "ProfileSet", "message": "Hardware profile set: unknown"}
+2024-07-31T10:41:38.808Z        INFO    controllers.BMCEventSubscription        start   {"bmceventsubscription": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:38.808Z        INFO    controllers.BMCEventSubscription        done    {"bmceventsubscription": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:38.829Z        INFO    controllers.BareMetalHost       done    {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering", "requeue": true, "after": "0s"}
+2024-07-31T10:41:38.834Z        INFO    controllers.BareMetalHost       start   {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:38.834Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:38.836Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:38.850Z        DEBUG   controllers.BareMetalHost       registering and validating access to management controller      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering", "credentials": {"credentials":{"name":"bmh-158-bmc-secret","namespace":"metal3"},"credentialsVersion":"8982407"}}
+2024-07-31T10:41:38.850Z        DEBUG   provisioner.ironic      validating management access    {"host": "metal3~bmh-158"}
+2024-07-31T10:41:38.859Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:38.871Z        DEBUG   provisioner.ironic      node has assigned port  {"host": "metal3~bmh-158", "node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:41:38.871Z        INFO    provisioner.ironic      current provision state {"host": "metal3~bmh-158", "lastError": "", "current": "manageable", "target": ""}
+2024-07-31T10:41:38.871Z        DEBUG   controllers.BareMetalHost       using hardware profile  {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering", "profile": "unknown"}
+2024-07-31T10:41:38.877Z        INFO    controllers.BareMetalHost       created new hostFirmwareSettings resource       {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering"}
+2024-07-31T10:41:38.877Z        INFO    controllers.HostFirmwareSettings        start   {"hostfirmwaresettings": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:38.877Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:38.880Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:38.882Z        INFO    controllers.BareMetalHost       created new hostFirmwareComponents resource     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering"}
+2024-07-31T10:41:38.882Z        INFO    controllers.BareMetalHost       updating credentials success status fields      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering"}
+2024-07-31T10:41:38.882Z        INFO    controllers.BareMetalHost       clearing previous error message {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering"}
+2024-07-31T10:41:38.882Z        INFO    controllers.HostFirmwareComponents      start   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:38.882Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:38.893Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:38.893Z        DEBUG   controllers.HostFirmwareSettings        retrieving firmware settings and saving to resource     {"hostfirmwaresettings": {"name":"bmh-158","namespace":"metal3"}, "Node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:41:38.915Z        INFO    controllers.BareMetalHost       changing provisioning state     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering", "old": "registering", "new": "inspecting"}
+2024-07-31T10:41:38.915Z        INFO    controllers.BareMetalHost       saving host status      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering", "operational status": "OK", "provisioning state": "inspecting"}
+2024-07-31T10:41:38.918Z        DEBUG   controllers.HostFirmwareComponents      retrieving firmware components and saving to resource   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}, "Node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:41:38.919Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:38.926Z        INFO    controllers.BareMetalHost       publishing event        {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "reason": "BMCAccessValidated", "message": "Verified access to BMC"}
+2024-07-31T10:41:38.926Z        INFO    controllers.BMCEventSubscription        start   {"bmceventsubscription": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:38.926Z        INFO    controllers.BMCEventSubscription        done    {"bmceventsubscription": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:38.927Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:38.928Z        ERROR   Reconciler error        {"controller": "hostfirmwarecomponents", "controllerGroup": "metal3.io", "controllerKind": "HostFirmwareComponents", "HostFirmwareComponents": {"name":"bmh-158","namespace":"metal3"}, "namespace": "metal3", "name": "bmh-158", "reconcileID": "40d30997-d9fd-4312-bba4-820fe8f22123", "error": "host does not support Firmware Updates"}
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:329
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:227
+2024-07-31T10:41:38.930Z        INFO    controllers.BareMetalHost       done    {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "registering", "requeue": true, "after": "0s"}
+2024-07-31T10:41:38.933Z        INFO    controllers.HostFirmwareComponents      start   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:38.933Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:38.939Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:38.940Z        INFO    provisioner.ironic      retrieved BIOS settings for node        {"host": "metal3~bmh-158", "node": "6948e186-19b4-4f00-baa5-6df7f605a0d7", "size": 0}
+2024-07-31T10:41:38.940Z        DEBUG   controllers.HostFirmwareSettings        getting firmwareSchema  {"hostfirmwaresettings": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:38.940Z        INFO    controllers.BareMetalHost       start   {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:38.940Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:38.945Z        INFO    controllers.HostFirmwareSettings        created new firmwareSchema resource     {"hostfirmwaresettings": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:38.945Z        INFO    controllers.HostFirmwareSettings        Status has changed      {"hostfirmwaresettings": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:38.953Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:38.953Z        DEBUG   controllers.HostFirmwareComponents      retrieving firmware components and saving to resource   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}, "Node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:41:38.953Z        INFO    controllers.HostFirmwareSettings        hostfirmwaresettings in event handler
+2024-07-31T10:41:38.962Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:38.962Z        ERROR   Reconciler error        {"controller": "hostfirmwarecomponents", "controllerGroup": "metal3.io", "controllerKind": "HostFirmwareComponents", "HostFirmwareComponents": {"name":"bmh-158","namespace":"metal3"}, "namespace": "metal3", "name": "bmh-158", "reconcileID": "bb9aaf59-1b33-4a3d-879c-fb9e94c3570a", "error": "host does not support Firmware Updates"}
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:329
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:227
+2024-07-31T10:41:38.972Z        INFO    controllers.HostFirmwareComponents      start   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:38.972Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:38.977Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:38.984Z        DEBUG   controllers.BareMetalHost       registering and validating access to management controller      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "credentials": {"credentials":{"name":"bmh-158-bmc-secret","namespace":"metal3"},"credentialsVersion":"8982407"}}
+2024-07-31T10:41:38.984Z        DEBUG   provisioner.ironic      validating management access    {"host": "metal3~bmh-158"}
+2024-07-31T10:41:38.996Z        DEBUG   controllers.HostFirmwareComponents      retrieving firmware components and saving to resource   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}, "Node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:41:39.002Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:39.010Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:39.010Z        ERROR   Reconciler error        {"controller": "hostfirmwarecomponents", "controllerGroup": "metal3.io", "controllerKind": "HostFirmwareComponents", "HostFirmwareComponents": {"name":"bmh-158","namespace":"metal3"}, "namespace": "metal3", "name": "bmh-158", "reconcileID": "408d1fe3-7d2d-4a7c-83e8-828ba1349d70", "error": "host does not support Firmware Updates"}
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:329
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:227
+2024-07-31T10:41:39.021Z        DEBUG   provisioner.ironic      node has assigned port  {"host": "metal3~bmh-158", "node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:41:39.021Z        INFO    provisioner.ironic      current provision state {"host": "metal3~bmh-158", "lastError": "", "current": "manageable", "target": ""}
+2024-07-31T10:41:39.021Z        DEBUG   controllers.BareMetalHost       using hardware profile  {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "profile": "unknown"}
+2024-07-31T10:41:39.021Z        DEBUG   controllers.BareMetalHost       verified access to the BMC      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:41:39.021Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:41:39.021Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:41:39.021Z        INFO    provisioner.ironic      inspecting hardware     {"host": "metal3~bmh-158"}
+2024-07-31T10:41:39.029Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:39.029Z        INFO    provisioner.ironic      getting hardware details from inspection        {"host": "metal3~bmh-158"}
+2024-07-31T10:41:39.031Z        INFO    controllers.HostFirmwareComponents      start   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:39.031Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:39.040Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:39.041Z        INFO    provisioner.ironic      starting new hardware inspection        {"host": "metal3~bmh-158"}
+2024-07-31T10:41:39.041Z        INFO    provisioner.ironic      changing provisioning state     {"host": "metal3~bmh-158", "current": "manageable", "existing target": "", "new target": "inspect"}
+2024-07-31T10:41:39.054Z        DEBUG   controllers.HostFirmwareComponents      retrieving firmware components and saving to resource   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}, "Node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:41:39.073Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:39.073Z        ERROR   Reconciler error        {"controller": "hostfirmwarecomponents", "controllerGroup": "metal3.io", "controllerKind": "HostFirmwareComponents", "HostFirmwareComponents": {"name":"bmh-158","namespace":"metal3"}, "namespace": "metal3", "name": "bmh-158", "reconcileID": "d68da072-c9bc-4698-bf16-b0c9944c3b79", "error": "host does not support Firmware Updates"}
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:329
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:227
+2024-07-31T10:41:39.088Z        INFO    controllers.BareMetalHost       publishing event        {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "reason": "InspectionStarted", "message": "Hardware inspection started"}
+2024-07-31T10:41:39.092Z        INFO    controllers.BareMetalHost       done    {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "requeue": true, "after": "10s"}
+2024-07-31T10:41:39.114Z        INFO    controllers.HostFirmwareComponents      start   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:39.114Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:39.121Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:39.136Z        DEBUG   controllers.HostFirmwareComponents      retrieving firmware components and saving to resource   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}, "Node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:41:39.146Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:39.146Z        ERROR   Reconciler error        {"controller": "hostfirmwarecomponents", "controllerGroup": "metal3.io", "controllerKind": "HostFirmwareComponents", "HostFirmwareComponents": {"name":"bmh-158","namespace":"metal3"}, "namespace": "metal3", "name": "bmh-158", "reconcileID": "c3329ae5-90f8-494a-b15a-a99a65311bcd", "error": "host does not support Firmware Updates"}
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:329
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:227
+2024-07-31T10:41:39.226Z        INFO    controllers.HostFirmwareComponents      start   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:39.226Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:39.229Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:39.242Z        DEBUG   controllers.HostFirmwareComponents      retrieving firmware components and saving to resource   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}, "Node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:41:39.251Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:39.251Z        ERROR   Reconciler error        {"controller": "hostfirmwarecomponents", "controllerGroup": "metal3.io", "controllerKind": "HostFirmwareComponents", "HostFirmwareComponents": {"name":"bmh-158","namespace":"metal3"}, "namespace": "metal3", "name": "bmh-158", "reconcileID": "8553d584-2be3-4e84-9515-02d80aad9be1", "error": "host does not support Firmware Updates"}
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:329
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:227
+2024-07-31T10:41:39.411Z        INFO    controllers.HostFirmwareComponents      start   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:39.411Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:39.414Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:39.427Z        DEBUG   controllers.HostFirmwareComponents      retrieving firmware components and saving to resource   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}, "Node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:41:39.436Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:39.436Z        ERROR   Reconciler error        {"controller": "hostfirmwarecomponents", "controllerGroup": "metal3.io", "controllerKind": "HostFirmwareComponents", "HostFirmwareComponents": {"name":"bmh-158","namespace":"metal3"}, "namespace": "metal3", "name": "bmh-158", "reconcileID": "8f371e52-f43f-4968-b2b3-5f4366208568", "error": "host does not support Firmware Updates"}
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:329
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:227
+2024-07-31T10:41:39.756Z        INFO    controllers.HostFirmwareComponents      start   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:39.756Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:39.761Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:39.778Z        DEBUG   controllers.HostFirmwareComponents      retrieving firmware components and saving to resource   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}, "Node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:41:39.789Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:39.789Z        ERROR   Reconciler error        {"controller": "hostfirmwarecomponents", "controllerGroup": "metal3.io", "controllerKind": "HostFirmwareComponents", "HostFirmwareComponents": {"name":"bmh-158","namespace":"metal3"}, "namespace": "metal3", "name": "bmh-158", "reconcileID": "151582b3-2347-49c5-9b35-28a3bf74765e", "error": "host does not support Firmware Updates"}
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:329
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:227
+2024-07-31T10:41:40.430Z        INFO    controllers.HostFirmwareComponents      start   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:40.430Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:40.434Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:40.458Z        DEBUG   controllers.HostFirmwareComponents      retrieving firmware components and saving to resource   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}, "Node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:41:40.473Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:40.473Z        ERROR   Reconciler error        {"controller": "hostfirmwarecomponents", "controllerGroup": "metal3.io", "controllerKind": "HostFirmwareComponents", "HostFirmwareComponents": {"name":"bmh-158","namespace":"metal3"}, "namespace": "metal3", "name": "bmh-158", "reconcileID": "0790e31f-09b8-44d2-9c0e-bf4c2721428b", "error": "host does not support Firmware Updates"}
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:329
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:227
+2024-07-31T10:41:41.754Z        INFO    controllers.HostFirmwareComponents      start   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:41.754Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:41.759Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:41.783Z        DEBUG   controllers.HostFirmwareComponents      retrieving firmware components and saving to resource   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}, "Node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:41:41.801Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:41.801Z        ERROR   Reconciler error        {"controller": "hostfirmwarecomponents", "controllerGroup": "metal3.io", "controllerKind": "HostFirmwareComponents", "HostFirmwareComponents": {"name":"bmh-158","namespace":"metal3"}, "namespace": "metal3", "name": "bmh-158", "reconcileID": "03f45a7f-b152-4afa-b37b-2dba31a8f6ae", "error": "host does not support Firmware Updates"}
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:329
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:227
+2024-07-31T10:41:44.362Z        INFO    controllers.HostFirmwareComponents      start   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:44.362Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:44.372Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:44.414Z        DEBUG   controllers.HostFirmwareComponents      retrieving firmware components and saving to resource   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}, "Node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:41:44.431Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:44.431Z        ERROR   Reconciler error        {"controller": "hostfirmwarecomponents", "controllerGroup": "metal3.io", "controllerKind": "HostFirmwareComponents", "HostFirmwareComponents": {"name":"bmh-158","namespace":"metal3"}, "namespace": "metal3", "name": "bmh-158", "reconcileID": "fe602507-5ed6-4ac6-be17-633cbb5d5914", "error": "host does not support Firmware Updates"}
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:329
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:227
+2024-07-31T10:41:49.092Z        INFO    controllers.BareMetalHost       start   {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:49.092Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:49.099Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:49.154Z        DEBUG   controllers.BareMetalHost       registering and validating access to management controller      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "credentials": {"credentials":{"name":"bmh-158-bmc-secret","namespace":"metal3"},"credentialsVersion":"8982407"}}
+2024-07-31T10:41:49.154Z        DEBUG   provisioner.ironic      validating management access    {"host": "metal3~bmh-158"}
+2024-07-31T10:41:49.175Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:49.196Z        DEBUG   provisioner.ironic      node has assigned port  {"host": "metal3~bmh-158", "node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:41:49.196Z        INFO    provisioner.ironic      current provision state {"host": "metal3~bmh-158", "lastError": "", "current": "inspecting", "target": "manageable"}
+2024-07-31T10:41:49.196Z        DEBUG   controllers.BareMetalHost       using hardware profile  {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "profile": "unknown"}
+2024-07-31T10:41:49.196Z        DEBUG   controllers.BareMetalHost       verified access to the BMC      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:41:49.196Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:41:49.196Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:41:49.196Z        INFO    provisioner.ironic      inspecting hardware     {"host": "metal3~bmh-158"}
+2024-07-31T10:41:49.209Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:49.209Z        INFO    provisioner.ironic      inspection in progress  {"host": "metal3~bmh-158"}
+2024-07-31T10:41:49.209Z        INFO    controllers.BareMetalHost       done    {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "requeue": true, "after": "15s"}
+2024-07-31T10:41:49.552Z        INFO    controllers.HostFirmwareComponents      start   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:49.553Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:49.560Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:49.593Z        DEBUG   controllers.HostFirmwareComponents      retrieving firmware components and saving to resource   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}, "Node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:41:49.612Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:49.613Z        ERROR   Reconciler error        {"controller": "hostfirmwarecomponents", "controllerGroup": "metal3.io", "controllerKind": "HostFirmwareComponents", "HostFirmwareComponents": {"name":"bmh-158","namespace":"metal3"}, "namespace": "metal3", "name": "bmh-158", "reconcileID": "e03b485a-c9d5-41e8-a48b-2bf2d36c40ac", "error": "host does not support Firmware Updates"}
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:329
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:227
+2024-07-31T10:41:59.853Z        INFO    controllers.HostFirmwareComponents      start   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:41:59.853Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:59.864Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:41:59.903Z        DEBUG   controllers.HostFirmwareComponents      retrieving firmware components and saving to resource   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}, "Node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:41:59.925Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:41:59.925Z        ERROR   Reconciler error        {"controller": "hostfirmwarecomponents", "controllerGroup": "metal3.io", "controllerKind": "HostFirmwareComponents", "HostFirmwareComponents": {"name":"bmh-158","namespace":"metal3"}, "namespace": "metal3", "name": "bmh-158", "reconcileID": "beeffca4-b8f4-4e81-bd9a-bd10049bc8b7", "error": "host does not support Firmware Updates"}
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:329
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:227
+2024-07-31T10:42:04.210Z        INFO    controllers.BareMetalHost       start   {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:42:04.210Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:42:04.219Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:42:04.277Z        DEBUG   controllers.BareMetalHost       registering and validating access to management controller      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "credentials": {"credentials":{"name":"bmh-158-bmc-secret","namespace":"metal3"},"credentialsVersion":"8982407"}}
+2024-07-31T10:42:04.277Z        DEBUG   provisioner.ironic      validating management access    {"host": "metal3~bmh-158"}
+2024-07-31T10:42:04.295Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:42:04.314Z        DEBUG   provisioner.ironic      node has assigned port  {"host": "metal3~bmh-158", "node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:42:04.314Z        INFO    provisioner.ironic      current provision state {"host": "metal3~bmh-158", "lastError": "", "current": "inspecting", "target": "manageable"}
+2024-07-31T10:42:04.314Z        DEBUG   controllers.BareMetalHost       using hardware profile  {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "profile": "unknown"}
+2024-07-31T10:42:04.314Z        DEBUG   controllers.BareMetalHost       verified access to the BMC      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:42:04.314Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:42:04.314Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:42:04.314Z        INFO    provisioner.ironic      inspecting hardware     {"host": "metal3~bmh-158"}
+2024-07-31T10:42:04.326Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:42:04.326Z        INFO    provisioner.ironic      inspection in progress  {"host": "metal3~bmh-158"}
+2024-07-31T10:42:04.326Z        INFO    controllers.BareMetalHost       done    {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "requeue": true, "after": "15s"}
+2024-07-31T10:42:19.327Z        INFO    controllers.BareMetalHost       start   {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:42:19.328Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:42:19.339Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:42:19.392Z        DEBUG   controllers.BareMetalHost       registering and validating access to management controller      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "credentials": {"credentials":{"name":"bmh-158-bmc-secret","namespace":"metal3"},"credentialsVersion":"8982407"}}
+2024-07-31T10:42:19.393Z        DEBUG   provisioner.ironic      validating management access    {"host": "metal3~bmh-158"}
+2024-07-31T10:42:19.411Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:42:19.431Z        DEBUG   provisioner.ironic      node has assigned port  {"host": "metal3~bmh-158", "node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:42:19.431Z        INFO    provisioner.ironic      current provision state {"host": "metal3~bmh-158", "lastError": "", "current": "inspect wait", "target": "manageable"}
+2024-07-31T10:42:19.431Z        DEBUG   controllers.BareMetalHost       using hardware profile  {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "profile": "unknown"}
+2024-07-31T10:42:19.431Z        DEBUG   controllers.BareMetalHost       verified access to the BMC      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:42:19.431Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:42:19.431Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:42:19.431Z        INFO    provisioner.ironic      inspecting hardware     {"host": "metal3~bmh-158"}
+2024-07-31T10:42:19.444Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:42:19.444Z        INFO    provisioner.ironic      inspection in progress  {"host": "metal3~bmh-158"}
+2024-07-31T10:42:19.444Z        INFO    controllers.BareMetalHost       done    {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "requeue": true, "after": "15s"}
+2024-07-31T10:42:20.406Z        INFO    controllers.HostFirmwareComponents      start   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:42:20.406Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:42:20.410Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:42:20.429Z        DEBUG   controllers.HostFirmwareComponents      retrieving firmware components and saving to resource   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}, "Node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:42:20.441Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:42:20.442Z        ERROR   Reconciler error        {"controller": "hostfirmwarecomponents", "controllerGroup": "metal3.io", "controllerKind": "HostFirmwareComponents", "HostFirmwareComponents": {"name":"bmh-158","namespace":"metal3"}, "namespace": "metal3", "name": "bmh-158", "reconcileID": "55c9d00e-8a01-4a3e-8142-9165cca41fd5", "error": "host does not support Firmware Updates"}
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:329
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:227
+2024-07-31T10:42:34.445Z        INFO    controllers.BareMetalHost       start   {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:42:34.445Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:42:34.456Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:42:34.510Z        DEBUG   controllers.BareMetalHost       registering and validating access to management controller      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "credentials": {"credentials":{"name":"bmh-158-bmc-secret","namespace":"metal3"},"credentialsVersion":"8982407"}}
+2024-07-31T10:42:34.510Z        DEBUG   provisioner.ironic      validating management access    {"host": "metal3~bmh-158"}
+2024-07-31T10:42:34.530Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:42:34.551Z        DEBUG   provisioner.ironic      node has assigned port  {"host": "metal3~bmh-158", "node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:42:34.551Z        INFO    provisioner.ironic      current provision state {"host": "metal3~bmh-158", "lastError": "", "current": "inspect wait", "target": "manageable"}
+2024-07-31T10:42:34.551Z        DEBUG   controllers.BareMetalHost       using hardware profile  {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "profile": "unknown"}
+2024-07-31T10:42:34.551Z        DEBUG   controllers.BareMetalHost       verified access to the BMC      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:42:34.551Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:42:34.551Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:42:34.551Z        INFO    provisioner.ironic      inspecting hardware     {"host": "metal3~bmh-158"}
+2024-07-31T10:42:34.565Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:42:34.565Z        INFO    provisioner.ironic      inspection in progress  {"host": "metal3~bmh-158"}
+2024-07-31T10:42:34.565Z        INFO    controllers.BareMetalHost       done    {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "requeue": true, "after": "15s"}
+2024-07-31T10:42:49.565Z        INFO    controllers.BareMetalHost       start   {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:42:49.565Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:42:49.574Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:42:49.628Z        DEBUG   controllers.BareMetalHost       registering and validating access to management controller      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "credentials": {"credentials":{"name":"bmh-158-bmc-secret","namespace":"metal3"},"credentialsVersion":"8982407"}}
+2024-07-31T10:42:49.628Z        DEBUG   provisioner.ironic      validating management access    {"host": "metal3~bmh-158"}
+2024-07-31T10:42:49.648Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:42:49.669Z        DEBUG   provisioner.ironic      node has assigned port  {"host": "metal3~bmh-158", "node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:42:49.669Z        INFO    provisioner.ironic      current provision state {"host": "metal3~bmh-158", "lastError": "", "current": "inspect wait", "target": "manageable"}
+2024-07-31T10:42:49.669Z        DEBUG   controllers.BareMetalHost       using hardware profile  {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "profile": "unknown"}
+2024-07-31T10:42:49.669Z        DEBUG   controllers.BareMetalHost       verified access to the BMC      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:42:49.669Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:42:49.669Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:42:49.669Z        INFO    provisioner.ironic      inspecting hardware     {"host": "metal3~bmh-158"}
+2024-07-31T10:42:49.683Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:42:49.683Z        INFO    provisioner.ironic      inspection in progress  {"host": "metal3~bmh-158"}
+2024-07-31T10:42:49.683Z        INFO    controllers.BareMetalHost       done    {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "requeue": true, "after": "15s"}
+2024-07-31T10:43:01.403Z        INFO    controllers.HostFirmwareComponents      start   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:43:01.403Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:43:01.412Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:43:01.448Z        DEBUG   controllers.HostFirmwareComponents      retrieving firmware components and saving to resource   {"hostfirmwarecomponents": {"name":"bmh-158","namespace":"metal3"}, "Node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:43:01.470Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:43:01.470Z        ERROR   Reconciler error        {"controller": "hostfirmwarecomponents", "controllerGroup": "metal3.io", "controllerKind": "HostFirmwareComponents", "HostFirmwareComponents": {"name":"bmh-158","namespace":"metal3"}, "namespace": "metal3", "name": "bmh-158", "reconcileID": "855fa8d4-da39-4d32-9c8b-00315ea8214f", "error": "host does not support Firmware Updates"}
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).reconcileHandler
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:329
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).processNextWorkItem
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:266
+sigs.k8s.io/controller-runtime/pkg/internal/controller.(*Controller).Start.func2.2
+        /go/pkg/mod/sigs.k8s.io/controller-runtime@v0.16.5/pkg/internal/controller/controller.go:227
+2024-07-31T10:43:04.684Z        INFO    controllers.BareMetalHost       start   {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:43:04.684Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:43:04.690Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:43:04.734Z        DEBUG   controllers.BareMetalHost       registering and validating access to management controller      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "credentials": {"credentials":{"name":"bmh-158-bmc-secret","namespace":"metal3"},"credentialsVersion":"8982407"}}
+2024-07-31T10:43:04.734Z        DEBUG   provisioner.ironic      validating management access    {"host": "metal3~bmh-158"}
+2024-07-31T10:43:04.752Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:43:04.771Z        DEBUG   provisioner.ironic      node has assigned port  {"host": "metal3~bmh-158", "node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:43:04.771Z        INFO    provisioner.ironic      current provision state {"host": "metal3~bmh-158", "lastError": "", "current": "inspect wait", "target": "manageable"}
+2024-07-31T10:43:04.771Z        DEBUG   controllers.BareMetalHost       using hardware profile  {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "profile": "unknown"}
+2024-07-31T10:43:04.771Z        DEBUG   controllers.BareMetalHost       verified access to the BMC      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:43:04.771Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:43:04.771Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:43:04.771Z        INFO    provisioner.ironic      inspecting hardware     {"host": "metal3~bmh-158"}
+2024-07-31T10:43:04.785Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:43:04.785Z        INFO    provisioner.ironic      inspection in progress  {"host": "metal3~bmh-158"}
+2024-07-31T10:43:04.785Z        INFO    controllers.BareMetalHost       done    {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "requeue": true, "after": "15s"}
+2024-07-31T10:43:19.786Z        INFO    controllers.BareMetalHost       start   {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:43:19.786Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:43:19.798Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:43:19.854Z        DEBUG   controllers.BareMetalHost       registering and validating access to management controller      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "credentials": {"credentials":{"name":"bmh-158-bmc-secret","namespace":"metal3"},"credentialsVersion":"8982407"}}
+2024-07-31T10:43:19.854Z        DEBUG   provisioner.ironic      validating management access    {"host": "metal3~bmh-158"}
+2024-07-31T10:43:19.873Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:43:19.894Z        DEBUG   provisioner.ironic      node has assigned port  {"host": "metal3~bmh-158", "node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:43:19.894Z        INFO    provisioner.ironic      current provision state {"host": "metal3~bmh-158", "lastError": "", "current": "inspect wait", "target": "manageable"}
+2024-07-31T10:43:19.894Z        DEBUG   controllers.BareMetalHost       using hardware profile  {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "profile": "unknown"}
+2024-07-31T10:43:19.894Z        DEBUG   controllers.BareMetalHost       verified access to the BMC      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:43:19.894Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:43:19.894Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:43:19.894Z        INFO    provisioner.ironic      inspecting hardware     {"host": "metal3~bmh-158"}
+2024-07-31T10:43:19.907Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:43:19.907Z        INFO    provisioner.ironic      inspection in progress  {"host": "metal3~bmh-158"}
+2024-07-31T10:43:19.907Z        INFO    controllers.BareMetalHost       done    {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "requeue": true, "after": "15s"}
+2024-07-31T10:43:34.908Z        INFO    controllers.BareMetalHost       start   {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:43:34.908Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:43:34.916Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:43:34.968Z        DEBUG   controllers.BareMetalHost       registering and validating access to management controller      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "credentials": {"credentials":{"name":"bmh-158-bmc-secret","namespace":"metal3"},"credentialsVersion":"8982407"}}
+2024-07-31T10:43:34.969Z        DEBUG   provisioner.ironic      validating management access    {"host": "metal3~bmh-158"}
+2024-07-31T10:43:34.985Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:43:35.003Z        DEBUG   provisioner.ironic      node has assigned port  {"host": "metal3~bmh-158", "node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:43:35.003Z        INFO    provisioner.ironic      current provision state {"host": "metal3~bmh-158", "lastError": "", "current": "inspect wait", "target": "manageable"}
+2024-07-31T10:43:35.003Z        DEBUG   controllers.BareMetalHost       using hardware profile  {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "profile": "unknown"}
+2024-07-31T10:43:35.003Z        DEBUG   controllers.BareMetalHost       verified access to the BMC      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:43:35.003Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:43:35.003Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:43:35.003Z        INFO    provisioner.ironic      inspecting hardware     {"host": "metal3~bmh-158"}
+2024-07-31T10:43:35.016Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:43:35.016Z        INFO    provisioner.ironic      inspection in progress  {"host": "metal3~bmh-158"}
+2024-07-31T10:43:35.016Z        INFO    controllers.BareMetalHost       done    {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "requeue": true, "after": "15s"}
+2024-07-31T10:43:50.017Z        INFO    controllers.BareMetalHost       start   {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:43:50.017Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:43:50.028Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:43:50.083Z        DEBUG   controllers.BareMetalHost       registering and validating access to management controller      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "credentials": {"credentials":{"name":"bmh-158-bmc-secret","namespace":"metal3"},"credentialsVersion":"8982407"}}
+2024-07-31T10:43:50.083Z        DEBUG   provisioner.ironic      validating management access    {"host": "metal3~bmh-158"}
+2024-07-31T10:43:50.103Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:43:50.124Z        DEBUG   provisioner.ironic      node has assigned port  {"host": "metal3~bmh-158", "node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:43:50.124Z        INFO    provisioner.ironic      current provision state {"host": "metal3~bmh-158", "lastError": "", "current": "inspect wait", "target": "manageable"}
+2024-07-31T10:43:50.124Z        DEBUG   controllers.BareMetalHost       using hardware profile  {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "profile": "unknown"}
+2024-07-31T10:43:50.124Z        DEBUG   controllers.BareMetalHost       verified access to the BMC      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:43:50.124Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:43:50.124Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:43:50.124Z        INFO    provisioner.ironic      inspecting hardware     {"host": "metal3~bmh-158"}
+2024-07-31T10:43:50.138Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:43:50.138Z        INFO    provisioner.ironic      inspection in progress  {"host": "metal3~bmh-158"}
+2024-07-31T10:43:50.138Z        INFO    controllers.BareMetalHost       done    {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "requeue": true, "after": "15s"}
+2024-07-31T10:44:05.139Z        INFO    controllers.BareMetalHost       start   {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:44:05.139Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:44:05.150Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:44:05.202Z        DEBUG   controllers.BareMetalHost       registering and validating access to management controller      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "credentials": {"credentials":{"name":"bmh-158-bmc-secret","namespace":"metal3"},"credentialsVersion":"8982407"}}
+2024-07-31T10:44:05.202Z        DEBUG   provisioner.ironic      validating management access    {"host": "metal3~bmh-158"}
+2024-07-31T10:44:05.221Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:44:05.241Z        DEBUG   provisioner.ironic      node has assigned port  {"host": "metal3~bmh-158", "node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:44:05.241Z        INFO    provisioner.ironic      current provision state {"host": "metal3~bmh-158", "lastError": "", "current": "inspect wait", "target": "manageable"}
+2024-07-31T10:44:05.241Z        DEBUG   controllers.BareMetalHost       using hardware profile  {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "profile": "unknown"}
+2024-07-31T10:44:05.241Z        DEBUG   controllers.BareMetalHost       verified access to the BMC      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:44:05.241Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:44:05.241Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:44:05.241Z        INFO    provisioner.ironic      inspecting hardware     {"host": "metal3~bmh-158"}
+2024-07-31T10:44:05.254Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:44:05.254Z        INFO    provisioner.ironic      inspection in progress  {"host": "metal3~bmh-158"}
+2024-07-31T10:44:05.254Z        INFO    controllers.BareMetalHost       done    {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "requeue": true, "after": "15s"}
+2024-07-31T10:44:20.255Z        INFO    controllers.BareMetalHost       start   {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}}
+2024-07-31T10:44:20.255Z        DEBUG   provisioner.ironic      verifying ironic provisioner dependencies       {"host": "metal3~bmh-158"}
+2024-07-31T10:44:20.267Z        DEBUG   provisioner.ironic      supported Ironic API features   {"host": "metal3~bmh-158", "maxVersion": "1.89", "chosenVersion": "1.89", "firmwareUpdates": true, "dataImage": true}
+2024-07-31T10:44:20.324Z        DEBUG   controllers.BareMetalHost       registering and validating access to management controller      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "credentials": {"credentials":{"name":"bmh-158-bmc-secret","namespace":"metal3"},"credentialsVersion":"8982407"}}
+2024-07-31T10:44:20.324Z        DEBUG   provisioner.ironic      validating management access    {"host": "metal3~bmh-158"}
+2024-07-31T10:44:20.342Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:44:20.361Z        DEBUG   provisioner.ironic      node has assigned port  {"host": "metal3~bmh-158", "node": "6948e186-19b4-4f00-baa5-6df7f605a0d7"}
+2024-07-31T10:44:20.361Z        INFO    provisioner.ironic      current provision state {"host": "metal3~bmh-158", "lastError": "", "current": "inspect wait", "target": "manageable"}
+2024-07-31T10:44:20.362Z        DEBUG   controllers.BareMetalHost       using hardware profile  {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "profile": "unknown"}
+2024-07-31T10:44:20.362Z        DEBUG   controllers.BareMetalHost       verified access to the BMC      {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:44:20.362Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:44:20.362Z        INFO    controllers.BareMetalHost       inspecting hardware     {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting"}
+2024-07-31T10:44:20.362Z        INFO    provisioner.ironic      inspecting hardware     {"host": "metal3~bmh-158"}
+2024-07-31T10:44:20.373Z        DEBUG   provisioner.ironic      found existing node by ID       {"host": "metal3~bmh-158"}
+2024-07-31T10:44:20.373Z        INFO    provisioner.ironic      inspection in progress  {"host": "metal3~bmh-158"}
+2024-07-31T10:44:20.373Z        INFO    controllers.BareMetalHost       done    {"baremetalhost": {"name":"bmh-158","namespace":"metal3"}, "provisioningState": "inspecting", "requeue": true, "after": "15s"}
