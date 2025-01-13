@@ -1,0 +1,41 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" border="50" scale="3" compressed="false" locked="false" version="26.0.5">
+  <diagram name="Blank" id="YmL12bMKpDGza6XwsDPr">
+    <mxGraphModel dx="326" dy="982" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="1" shadow="0">
+      <root>
+        <mxCell id="X5NqExCQtvZxIxQ7pmgY-0" />
+        <mxCell id="1" parent="X5NqExCQtvZxIxQ7pmgY-0" />
+        <mxCell id="LIsd4HUn8kdksyz05rby-1" value="Mindmap" style="swimlane;html=1;startSize=20;horizontal=1;containerType=tree;labelBackgroundColor=none;strokeColor=#D4E1F5;strokeWidth=1;fillColor=none;fontFamily=Comic Sans MS;fontSize=9;swimlaneLine=0;dashed=1;collapsible=0;" parent="1" vertex="1">
+          <mxGeometry x="869" y="-105" width="828" height="441" as="geometry" />
+        </mxCell>
+        <mxCell id="LIsd4HUn8kdksyz05rby-2" value="&lt;font face=&quot;Comic Sans MS&quot;&gt;Transformer&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;align=center;container=1;recursiveResize=0;treeFolding=1;strokeWidth=2;" parent="LIsd4HUn8kdksyz05rby-1" vertex="1">
+          <mxGeometry x="273" y="172" width="108" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="LIsd4HUn8kdksyz05rby-3" value="Encoder" style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" parent="LIsd4HUn8kdksyz05rby-1" vertex="1">
+          <mxGeometry x="435" y="122" width="84" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LIsd4HUn8kdksyz05rby-4" value="" style="edgeStyle=entityRelationEdgeStyle;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="LIsd4HUn8kdksyz05rby-1" source="LIsd4HUn8kdksyz05rby-2" target="LIsd4HUn8kdksyz05rby-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="295.0000000000002" y="252.5" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LIsd4HUn8kdksyz05rby-5" value="Decoder" style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" parent="LIsd4HUn8kdksyz05rby-1" vertex="1">
+          <mxGeometry x="435" y="222" width="84" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LIsd4HUn8kdksyz05rby-6" value="" style="edgeStyle=entityRelationEdgeStyle;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="LIsd4HUn8kdksyz05rby-1" source="LIsd4HUn8kdksyz05rby-2" target="LIsd4HUn8kdksyz05rby-5" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="391" y="209" as="sourcePoint" />
+            <mxPoint x="445" y="147" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1nIoxdgoApBVamaD5Khh-1" value="" style="edgeStyle=entityRelationEdgeStyle;startArrow=none;endArrow=none;segment=10;curved=1;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" target="1nIoxdgoApBVamaD5Khh-2" source="LIsd4HUn8kdksyz05rby-3" parent="LIsd4HUn8kdksyz05rby-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1250" y="94" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1nIoxdgoApBVamaD5Khh-2" value="Bert&lt;div&gt;只是编码器，输出编码矩阵&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;arcSize=50;align=center;verticalAlign=middle;strokeWidth=1;autosize=1;spacing=4;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;entityRelationEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;,&quot;segment&quot;:10,&quot;curved&quot;:1,&quot;sourcePerimeterSpacing&quot;:0,&quot;targetPerimeterSpacing&quot;:0};" vertex="1" parent="LIsd4HUn8kdksyz05rby-1">
+          <mxGeometry x="566" y="87" width="183" height="45" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
